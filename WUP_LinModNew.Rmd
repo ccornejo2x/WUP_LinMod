@@ -101,6 +101,11 @@ In this graph we are now looking at SIMS and GRIP.
 
 ### Numerical results 
 
+```{r}
+cor(SIMS~GRIP,data=data)
+```
+
+The numerical outcome for SIMS and grip is 0.6398458. This value is lower compared to the previous results, indicating that they have a weaker correlation between them.
 
 ### Inferential  (Build model.2)
   
