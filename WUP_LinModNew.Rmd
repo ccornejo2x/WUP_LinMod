@@ -65,6 +65,13 @@ Examining the residual standard error, we find it to be 1.226. The R-squared val
 #### Predict at target point
 
 
+```{r}
+mydata <- data.frame(GRIP=94, ARM=88)
+predict.lm(model.1, mydata, interval="prediction")
+```
+
+The predicted value came out to be 0.7063836. The lowest value observed is -1.726209, while the highest value recorded is 3.138977.
+
 #### scatterplot with model fit
   
 
