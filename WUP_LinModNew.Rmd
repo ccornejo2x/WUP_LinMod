@@ -118,6 +118,12 @@ The residual standard error stands at 1.295, accompanied by an adjusted R-square
 
 #### predict model.2 at target point
 
+```{r}
+predict.lm(model.2, mydata, interval="prediction")
+```
+
+The interval is now -3.107961 to 2.035652. 
+
 #### now add the model fit to our plot for model.2
   
 
