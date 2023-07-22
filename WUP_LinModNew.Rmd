@@ -109,6 +109,12 @@ The numerical outcome for SIMS and grip is 0.6398458. This value is lower compar
 
 ### Inferential  (Build model.2)
   
+```{r}
+model.2 <- lm(SIMS~GRIP,data=data)
+summary.lm(model.2)
+```
+
+The residual standard error stands at 1.295, accompanied by an adjusted R-squared of 0.4053. Thus far, it appears that the correlation between SIMS~GRIP is not as strong as the relationship observed between SIMS~ARM.
 
 #### predict model.2 at target point
 
