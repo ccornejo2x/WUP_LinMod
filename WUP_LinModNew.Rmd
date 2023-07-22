@@ -174,5 +174,12 @@ anova(model.1,model.3)
 
 ### Model.2 vs Model.3
 
+```{r}
+anova(model.2,model.3)
+```
+
+
+Model 3 is better than model 1 and 2 because of the low P-value. The lower the P-value, that's how we can tell.
+
 ## Informally compare Model.1 with model.2
 
