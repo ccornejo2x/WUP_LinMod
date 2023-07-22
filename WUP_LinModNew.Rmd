@@ -126,15 +126,35 @@ The interval is now -3.107961 to 2.035652.
 
 #### now add the model fit to our plot for model.2
   
+```{r}
+mygrip <- ggplot(data, aes(y = SIMS, x = GRIP)) +
+  geom_point() +
+  labs(title = "SIMS and GRIP") +
+  theme(plot.title = element_text(hjust = 0.5))
+mygrip +
+geom_smooth(method=lm)
+``` 
 
+This is with a model fit line to show correlation. 
 
 ## Model 3 SIM~ARM+GRIP
 
 ### Numerical results (cor)
 
-`
+```{r}
+cor(SIMS~ARM+GRIP,data=data)
+```
+  
+The correlation is larger than SIMS~GRIP and SIMS~ARM. With all three added up, the numerical results are 0.7326545.
   
 ### Inferential  (Build 2-dimentional model.3)
+
+```{r}
+model.3 <- lm(SIMS~ARM+GRIP,data=data)
+summary.lm(model.3)
+```
+
+In this particular model, the residual standard error is 1.144, and the adjusted R-squared is 0.5358. Notably, this model exhibits the most favorable residual error when compared to the other models. The model equation is given by SIMS = 0.037311 * ARM + 0.024470 * GRIP - 5.433871.
 
 #### predict model.3 at target point
   
